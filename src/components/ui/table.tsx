@@ -1,18 +1,31 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
 
-const Table = React.forwardRef<
-  HTMLTableElement,
-  React.HTMLAttributes<HTMLTableElement>
->(({ className, ...props }, ref) => (
-  <div className="relative w-full overflow-auto rounded-lg border bg-card">
-    <table
-      ref={ref}
-      className={cn("w-full caption-bottom text-sm", className)}
-      {...props}
-    />
-  </div>
-));
+interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
+  scrollOnMobile?: boolean;
+}
+
+const Table = React.forwardRef<HTMLTableElement, TableProps>(
+  ({ className, scrollOnMobile = true, ...props }, ref) => (
+    <div
+      className={cn(
+        "relative w-full rounded-lg border bg-card",
+        scrollOnMobile &&
+          "max-lg:-mx-4 max-lg:overflow-x-auto max-lg:px-4 sm:max-lg:-mx-6 lg:overflow-visible"
+      )}
+    >
+      <table
+        ref={ref}
+        className={cn(
+          "w-full caption-bottom text-sm",
+          scrollOnMobile && "min-w-[840px] lg:min-w-0 lg:table-fixed",
+          className
+        )}
+        {...props}
+      />
+    </div>
+  )
+);
 Table.displayName = "Table";
 
 const TableHeader = React.forwardRef<
@@ -57,7 +70,7 @@ const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={cn(
-      "h-11 px-4 text-left align-middle text-xs font-semibold uppercase tracking-wide text-muted-foreground",
+      "h-11 px-3 text-left align-middle text-xs font-semibold uppercase tracking-wide text-muted-foreground lg:px-2.5",
       className
     )}
     {...props}
@@ -71,7 +84,10 @@ const TableCell = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <td
     ref={ref}
-    className={cn("px-4 py-3 align-top text-sm leading-relaxed", className)}
+    className={cn(
+      "min-w-0 px-3 py-3 align-top text-sm leading-relaxed break-words lg:px-2.5",
+      className
+    )}
     {...props}
   />
 ));

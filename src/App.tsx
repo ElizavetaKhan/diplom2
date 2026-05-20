@@ -11,15 +11,11 @@ function App() {
         <header className="border-b bg-card/80 backdrop-blur-sm">
           <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
             <p className="mb-2 text-xs font-medium uppercase tracking-widest text-muted-foreground">
-              ВКР · Юзабилити-тестирование веб-приложений
+              ВКР · Исследование методов юзабилити-тестирования веб-приложений
             </p>
             <h1 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
               Подбор методов юзабилити-тестирования
             </h1>
-            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Систематизация методов тестирования в зависимости от типа
-              интерфейса, особенностей пользователей и задач исследования
-            </p>
           </div>
         </header>
 
@@ -81,10 +77,6 @@ function App() {
               </div>
             </div>
           </section>
-
-          <footer className="mt-8 pb-6 text-center text-xs text-muted-foreground">
-            Исследование методов юзабилити-тестирования веб-приложений
-          </footer>
         </main>
       </div>
     </TooltipProvider>

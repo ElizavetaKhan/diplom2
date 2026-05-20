@@ -1,6 +1,5 @@
 export interface MatrixRow {
   audience: string;
-  interfaceType: string;
   developmentStage: string;
   testGoal: string;
   priorityMethods: string;
@@ -29,7 +28,6 @@ export const interfaceTabs: InterfaceTab[] = [
     rows: [
       {
         audience: "Массовые пользователи",
-        interfaceType: "Информационные и контентные интерфейсы",
         developmentStage: "Прототип / готовый интерфейс",
         testGoal: "Оценка навигации и читаемости",
         priorityMethods:
@@ -42,7 +40,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Профессиональные пользователи",
-        interfaceType: "Информационные и контентные интерфейсы",
         developmentStage: "Готовый интерфейс",
         testGoal: "Оценка эффективности",
         priorityMethods:
@@ -55,7 +52,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Пользователи с ограничениями",
-        interfaceType: "Информационные и контентные интерфейсы",
         developmentStage: "Прототип / готовый интерфейс",
         testGoal: "Проверка доступности",
         priorityMethods:
@@ -68,7 +64,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Новички",
-        interfaceType: "Информационные и контентные интерфейсы",
         developmentStage: "Прототип",
         testGoal: "Оценка обучаемости интерфейса",
         priorityMethods: "Наблюдение, SUS, когнитивный walkthrough",
@@ -89,7 +84,6 @@ export const interfaceTabs: InterfaceTab[] = [
     rows: [
       {
         audience: "Массовые пользователи",
-        interfaceType: "Транзакционные интерфейсы",
         developmentStage: "Бета / готовый продукт",
         testGoal: "Проверка успешности пользовательских сценариев",
         priorityMethods: "A/B-тестирование, мысли вслух, SUS",
@@ -101,7 +95,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Профессиональные пользователи",
-        interfaceType: "Транзакционные интерфейсы",
         developmentStage: "Готовый интерфейс",
         testGoal: "Анализ производительности взаимодействия",
         priorityMethods: "Task completion time, A/B-тестирование",
@@ -113,7 +106,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Пользователи с ограничениями",
-        interfaceType: "Транзакционные интерфейсы",
         developmentStage: "Готовый интерфейс",
         testGoal: "Проверка доступности транзакций",
         priorityMethods: "WCAG-анализ, мысли вслух",
@@ -125,7 +117,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Новички",
-        interfaceType: "Транзакционные интерфейсы",
         developmentStage: "Прототип / бета",
         testGoal: "Проверка понятности пользовательского пути",
         priorityMethods: "Мысли вслух, когнитивный walkthrough, SUS",
@@ -146,7 +137,6 @@ export const interfaceTabs: InterfaceTab[] = [
     rows: [
       {
         audience: "Массовые пользователи",
-        interfaceType: "Профессиональные и инструментальные системы",
         developmentStage: "Прототип / бета",
         testGoal: "Проверка понятности сложных функций",
         priorityMethods: "SUS, эвристическая оценка, мысли вслух",
@@ -158,7 +148,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Профессиональные пользователи",
-        interfaceType: "Профессиональные и инструментальные системы",
         developmentStage: "Готовый интерфейс",
         testGoal: "Анализ эффективности работы",
         priorityMethods: "Айтрекинг, task completion time, лог-анализ",
@@ -170,7 +159,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Пользователи с ограничениями",
-        interfaceType: "Профессиональные и инструментальные системы",
         developmentStage: "Бета / готовый интерфейс",
         testGoal: "Проверка доступности сложных функций",
         priorityMethods: "WCAG, адаптированный мысли вслух",
@@ -182,7 +170,6 @@ export const interfaceTabs: InterfaceTab[] = [
       },
       {
         audience: "Новички",
-        interfaceType: "Профессиональные и инструментальные системы",
         developmentStage: "Прототип",
         testGoal: "Проверка обучаемости",
         priorityMethods: "Наблюдение, когнитивный walkthrough, SUS",

@@ -24,7 +24,7 @@ function CriteriaCell({
   objectivity: string;
 }) {
   return (
-    <div className="space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+    <div className="space-y-1 text-sm leading-snug text-muted-foreground">
       <p>
         <span className="font-medium text-foreground">Этап: </span>
         {stage}
@@ -51,7 +51,7 @@ function InteractionCell({
   limitations: string;
 }) {
   return (
-    <div className="space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+    <div className="space-y-1 text-sm leading-snug text-muted-foreground">
       <p>
         <span className="font-medium text-foreground">Цель: </span>
         {goal}
@@ -73,43 +73,45 @@ export function MethodsTable({ rows }: MethodsTableProps) {
     <Table>
       <TableHeader>
         <TableRow>
-          <TableHead className="min-w-[180px]">
-            Особенности целевой аудитории
+          <TableHead className="normal-case lg:w-[16%] lg:text-[11px]">
+            <span className="block leading-tight">Особенности целевой аудитории</span>
           </TableHead>
-          <TableHead className="min-w-[160px]">Тип интерфейса</TableHead>
-          <TableHead className="min-w-[200px]">Приоритетные методы</TableHead>
-          <TableHead className="min-w-[200px]">Дополнительные методы</TableHead>
-          <TableHead className="min-w-[180px]">
-            Критерии выбора методов
+          <TableHead className="normal-case lg:w-[19%] lg:text-[11px]">
+            <span className="block leading-tight">Приоритетные методы</span>
           </TableHead>
-          <TableHead className="min-w-[220px]">
-            Особенности пользовательского взаимодействия
+          <TableHead className="normal-case lg:w-[17%] lg:text-[11px]">
+            <span className="block leading-tight">Дополнительные методы</span>
+          </TableHead>
+          <TableHead className="normal-case lg:w-[21%] lg:text-[11px]">
+            <span className="block leading-tight">Критерии выбора методов</span>
+          </TableHead>
+          <TableHead className="normal-case lg:w-[27%] lg:text-[11px]">
+            <span className="block leading-tight">
+              Особенности пользовательского взаимодействия
+            </span>
           </TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {rows.map((row) => (
           <TableRow key={`${row.audience}-${row.testGoal}`}>
-            <TableCell>
+            <TableCell className="min-w-0 overflow-hidden">
               <AudienceBadge name={row.audience} />
             </TableCell>
-            <TableCell className="text-muted-foreground">
-              {row.interfaceType}
-            </TableCell>
-            <TableCell>
+            <TableCell className="min-w-0 overflow-hidden">
               <MethodList raw={row.priorityMethods} variant="priority" />
             </TableCell>
-            <TableCell>
+            <TableCell className="min-w-0 overflow-hidden">
               <MethodList raw={row.additionalMethods} variant="additional" />
             </TableCell>
-            <TableCell>
+            <TableCell className="min-w-0 overflow-hidden">
               <CriteriaCell
                 stage={row.developmentStage}
                 format={row.testFormat}
                 objectivity={row.objectivityLevel}
               />
             </TableCell>
-            <TableCell>
+            <TableCell className="min-w-0 overflow-hidden">
               <InteractionCell
                 goal={row.testGoal}
                 metrics={row.keyMetrics}
