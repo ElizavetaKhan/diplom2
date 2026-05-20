@@ -25,7 +25,7 @@ export function MethodBadge({
   const badge = (
     <span
       className={cn(
-        "inline-flex cursor-default rounded border px-1.5 py-px text-[11px] leading-tight font-medium transition-colors",
+        "inline-flex cursor-default rounded border px-2 py-0.5 text-xs font-medium transition-colors",
         variant === "priority"
           ? "border-primary/20 bg-primary/5 text-foreground hover:bg-primary/10"
           : "border-border bg-muted/40 text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -44,7 +44,7 @@ export function MethodBadge({
       <TooltipTrigger asChild>
         <button
           type="button"
-          className="inline-flex rounded focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+          className="inline-flex rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           {badge}
         </button>

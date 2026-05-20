@@ -11,7 +11,7 @@ export function MethodList({ raw, variant = "priority" }: MethodListProps) {
   const items = splitMethods(raw);
 
   return (
-    <div className="flex flex-wrap gap-1">
+    <div className="flex flex-wrap gap-1.5">
       {items.map((item) => {
         const key = resolveMethodTooltipKey(item);
         const tooltipLabel = key && methodTooltips[key] ? key : item;

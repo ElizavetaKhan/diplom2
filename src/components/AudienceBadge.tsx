@@ -16,7 +16,7 @@ export function AudienceBadge({ name }: AudienceBadgeProps) {
   const label = (
     <span
       className={cn(
-        "text-xs font-medium text-foreground",
+        "text-sm font-medium text-foreground",
         tooltip && "cursor-default underline decoration-dotted decoration-muted-foreground/50 underline-offset-2"
       )}
     >
@@ -31,7 +31,7 @@ export function AudienceBadge({ name }: AudienceBadgeProps) {
       <TooltipTrigger asChild>
         <button
           type="button"
-          className="text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring rounded"
+          className="text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
         >
           {label}
         </button>
